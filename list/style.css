@@ -1,0 +1,64 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+textarea {
+    resize: none;
+    height: 1.1em;
+    width: 250px;
+    overflow: hidden;
+}
+
+span {
+    border-right: white 2px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.form{
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    background-color: beige;
+    color: black;
+}
+
+.row{
+    background-color: beige;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.row button {
+    margin-top: 15px;
+}
+
+fieldset{
+    border: none;
+    outline: none;
+}
+
+.rightside {
+    background-color: beige;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    margin: 15px;
+    padding: 0;
+    color: black;
+}

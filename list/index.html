@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="row">
+            <!--<textarea name="firstName" id="firstName" placeholder="First Name"></textarea>
+            <textarea name="lastName" id="lastName" placeholder="Last Name"></textarea>-->
+            <h3>Passenger Travel Forms</h3>
+            <section class="form">
+                <fieldset>
+                    <legend></legend>
+                    <ul>
+                        <li>
+                            <label for="firstName">First Name</label>
+                            <input name="firstName" id="firstName" placeholder="First Name">
+                        </li>
+                        <li>
+                            <label for="lastName">Last Name</label>
+                            <input name="lastName" id="lastName" placeholder="Last Name">
+                        </li>
+                        <li>
+                            <label for="DOB">Date of Birth</label>
+                            <input name="DOB" id="DOB" placeholder="MM/DD/YYYY" type="date">
+                        </li>
+                        <li>
+                            <label for="dCity">Departure City</label>
+                            <input name="dCity" id="dCity" placeholder="City, State (Surprise, AZ)" type="text">
+                        </li>
+                        <li>
+                            <label for="aCity">Arrival City</label>
+                            <input name="aCity" id="aCity" placeholder="City, State (Alanta, GA)" type="text">
+                        </li>
+                        <li>
+                            <label for="dateL">Date Leaving</label>
+                            <input name="dateL" id="dateL" placeholder="MM/DD/YYYY" type="date">
+                        </li>
+                        <li>
+                            <label for="dateR">Date Returning</label>
+                            <input name="dateR" id="dateR" placeholder="MM/DD/YYYY" type="date">
+                        </li>
+                        <li>
+                            <label for="bagNum">Bag #</label>
+                            <input name="bagNum" id="bagNum" placeholder="bagNum" type="number">
+                        </li>
+                        <li>
+                            <label for="typeOfMeal">What type of meal do you want?</label>
+                            <br>
+                            <input type="radio" id="chicken" name="meal">
+                            <label for="chicken">Chicken</label><br>
+                            <input type="radio" id="fish" name="meal">
+                            <label for="fish">Fish</label><br>
+                            <input type="radio" id="veg" name="meal">
+                            <label for="Vegitarian">Vegitarian</label>
+                        </li>
+                            <label for="extras">Extras!</label>
+                            <br>
+                            <input name="extraLeg" id="extraLeg" type="checkbox">
+                            <label for="extraLeg">Extra Leg Room</label>
+                            <br>
+                            <input name="windowSeat" id="windowSeat" type="checkbox">
+                            <label for="windowSeat">Window Seat</label>
+                            <br>
+                            <input name="headphones" id="headphones" type="checkbox">
+                            <label for="headphones">Headphones</label>
+                            <br>
+                            <input name="secondMeal" id="secondMeal" type="checkbox">
+                            <label for="secondMeal">Second Meal</label>
+                            <br>
+                        <li>
+                            <button onclick="submitPass()">Submit Passenger Info</button>
+                        </li>
+                    </ul><!--
+                    <div class="row">
+                        <button onclick="addToList()">Add</button>
+                        <button onclick="print()">Print</button>
+                    </div>
+                    <div id="printSpace" class="row">
+                
+                    </div>-->
+                </fieldset>
+            </section>
+        </div>
+        <div class="rightside">
+            <div id="output" class="userOutput">
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
