@@ -11,7 +11,7 @@ textarea {
 }
 
 span {
-    border-right: white 2px solid;
+    border-right: black 2px solid;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -61,4 +61,8 @@ fieldset{
     margin: 15px;
     padding: 0;
     color: black;
+}
+
+.output-info {
+    margin: 2px;
 }
