@@ -227,21 +227,51 @@ function checkBirthDay(){
     }
 }
 
+let outputInfo
+
 function displayData(){
-    let outputInfo = document.getElementById('output-info');
+    outputInfo = document.getElementById('output-info');
     outputInfo.innerHTML = "";
-    outputInfo.innerHTML += `<div class="output-info"> <ul> <li>First Name: ${firstNameNew}</li> <li>Last Name: ${lastNameNew}</li> <li>DOB: ${dobNew}</li> <li>Departure City: ${dCityNew}</li> <li>Arrival City: ${aCityNew}</li> <li>Date Leaving: ${dateL}</li> <li>Date Returning: ${dateRNew}</li> <li>Bag #: ${bagNumNew}</li> <li>Meal: ${meal}</li> <li>Extra Leg Room: ${extraLeg}</li> <li>Window Seat: ${windowSeat}</li> <li>Headphones: ${headphones}</li> <li>Second Meal: ${secondMeal}</li> <li>Trip Durration: ${totalTrip}</li> <li>Can Drink: ${canDrink}</li> <li>Cost($): $${cost}</li> </ul> </div>`
+    outputInfo.innerHTML += `<div style="color: black;" class="output-info"> <ul> <li>First Name: ${firstNameNew}</li> <li>Last Name: ${lastNameNew}</li> <li>DOB: ${dobNew}</li> <li>Departure City: ${dCityNew}</li> <li>Arrival City: ${aCityNew}</li> <li>Date Leaving: ${dateL}</li> <li>Date Returning: ${dateRNew}</li> <li>Bag #: ${bagNumNew}</li> <li>Meal: ${meal}</li> <li>Extra Leg Room: ${extraLeg}</li> <li>Window Seat: ${windowSeat}</li> <li>Headphones: ${headphones}</li> <li>Second Meal: ${secondMeal}</li> <li>Trip Durration: ${totalTrip}</li> <li>Can Drink: ${canDrink}</li> <li>Cost($): $${cost}</li> </ul> </div>`
 }
+
+let space;
 
 function submitPass(){
     addToList();
     print();
     findTripDurration();
     checkBirthDay();
-    let space = document.getElementById('output');
+    space = document.getElementById('output');
     space.innerHTML = "";
     for(user in userList){
-        space.innerHTML +=`<div onclick="displayData()" style="display:block"><span>${id}</span>${firstNameNew} ${lastNameNew}</div>`;    
+        //space.innerHTML = "";
+        space.innerHTML +=`<div style="color: black;" class="listNum" onclick="displayData()" style="display:block"><span><ul><li>${userList[user].id}</span>${userList[user].firstName} ${userList[user].lastName}</li></ul></div>`;    
     }
     console.log(userList.length);
+    console.log(userList);
+}
+
+//add search by dropdown menu to easier sort
+function searchBar(){
+    let searchInput = document.getElementById('searchBar').value;
+    console.log(searchInput);
+    if(document.getElementById('selectFirstName').checked){
+        if(searchInput = userList[user].firstName){
+            console.log(`we got him`);
+            displayData();
+        } else{
+            console.log('oops, thats not good')
+        }
+    } else if(document.getElementById('selectLastName').checked){
+        if(searchInput = userList[user].lastName){
+            console.log(`we got him`);
+            displayData();
+        }
+    } else if(document.getElementById('selectID').checked){
+        if(searchInput = userList[user].id){
+            console.log(`we got him`);
+            displayData();
+        }
+    }
 }

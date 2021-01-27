@@ -9,8 +9,6 @@
 <body>
     <main>
         <div class="row">
-            <!--<textarea name="firstName" id="firstName" placeholder="First Name"></textarea>
-            <textarea name="lastName" id="lastName" placeholder="Last Name"></textarea>-->
             <h3>Passenger Travel Forms</h3>
             <section class="form">
                 <fieldset>
@@ -87,12 +85,27 @@
             </section>
         </div>
         <div class="rightside">
-            <div id="output" class="userOutput">
-
+            <div class="wrap">
+            <div class="search">
+                <input id="searchBar" placeholder="Search..." class="searchBar" type="text">
+                <button id="searchButton" onclick="searchBar()" type="submit">Search</button>
+                <p style="font-size: 1rem; margin: 5px;"><strong>Sort by:</strong></p>
+                    <br>
+                    <input type="radio" id="selectFirstName" name="sort">
+                    <label for="selectFirstName">First Name</label><br>
+                    <input type="radio" id="selectLastName" name="sort">
+                    <label for="selectlastName">Last Name</label><br>
+                    <input type="radio" id="selectID" name="sort">
+                    <label for="selectID">ID</label><br>
             </div>
+            <div class="yes">
+                <div id="output" class="userOutput"></div>
             <br>
             <div id="output-info">
-
+            </div>
+            </div>
+            </div>
+            </div>
             </div>
         </div>
     </main>
