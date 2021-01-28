@@ -227,12 +227,21 @@ function checkBirthDay(){
     }
 }
 
+let bob = new User("Bob", "Stockton", 103, "09-15-2010", "San Deigo", "Los Angelas", "01/28/2021", "02/14/2021", 01)
+userList.push(bob);
+
+let jerry = new User("Jerry", "Man", 91, "06-11-1897", "Germany", "USA", "10/09/1917", "12/15/1918", 02)
+userList.push(bob);
+
+let abraham = new User("Abraham", "Lincoln", 82, "02-12-1809", "Kentucky", "Washinton D.C", "04/04/1865", "04/15/1865", 03)
+userList.push(bob);
+
 let outputInfo
 
 function displayData(){
     outputInfo = document.getElementById('output-info');
     outputInfo.innerHTML = "";
-    outputInfo.innerHTML += `<div style="color: black;" class="output-info"> <ul> <li>First Name: ${firstNameNew}</li> <li>Last Name: ${lastNameNew}</li> <li>DOB: ${dobNew}</li> <li>Departure City: ${dCityNew}</li> <li>Arrival City: ${aCityNew}</li> <li>Date Leaving: ${dateL}</li> <li>Date Returning: ${dateRNew}</li> <li>Bag #: ${bagNumNew}</li> <li>Meal: ${meal}</li> <li>Extra Leg Room: ${extraLeg}</li> <li>Window Seat: ${windowSeat}</li> <li>Headphones: ${headphones}</li> <li>Second Meal: ${secondMeal}</li> <li>Trip Durration: ${totalTrip}</li> <li>Can Drink: ${canDrink}</li> <li>Cost($): $${cost}</li> </ul> </div>`
+    outputInfo.innerHTML += `<div style="color: black;" class="output-info"> <ul> <li>First Name: ${userList[user].firstName}</li> <li>Last Name: ${lastNameNew}</li> <li>DOB: ${dobNew}</li> <li>Departure City: ${dCityNew}</li> <li>Arrival City: ${aCityNew}</li> <li>Date Leaving: ${dateL}</li> <li>Date Returning: ${dateRNew}</li> <li>Bag #: ${bagNumNew}</li> <li>Meal: ${meal}</li> <li>Extra Leg Room: ${extraLeg}</li> <li>Window Seat: ${windowSeat}</li> <li>Headphones: ${headphones}</li> <li>Second Meal: ${secondMeal}</li> <li>Trip Durration: ${totalTrip}</li> <li>Can Drink: ${canDrink}</li> <li>Cost($): $${cost}</li> </ul> </div>`
 }
 
 let space;
@@ -246,7 +255,7 @@ function submitPass(){
     space.innerHTML = "";
     for(user in userList){
         //space.innerHTML = "";
-        space.innerHTML +=`<div style="color: black;" class="listNum" onclick="displayData()" style="display:block"><span><ul><li>${userList[user].id}</span>${userList[user].firstName} ${userList[user].lastName}</li></ul></div>`;    
+        space.innerHTML +=`<div style="color: black;" class="listNum" onclick="displayData()" style="display:block"><ul><li>${userList[user].id}${userList[user].firstName} ${userList[user].lastName}</li></ul></div>`;    
     }
     console.log(userList.length);
     console.log(userList);
@@ -258,7 +267,8 @@ function searchBar(){
     console.log(searchInput);
     if(document.getElementById('selectFirstName').checked){
         if(searchInput = userList[user].firstName){
-            console.log(`we got him`);
+            console.log(userList[user].firstName);
+            console.log()
             displayData();
         } else{
             console.log('oops, thats not good')
