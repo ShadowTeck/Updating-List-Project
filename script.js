@@ -231,10 +231,10 @@ let bob = new User("Bob", "Stockton", 103, "09-15-2010", "San Deigo", "Los Angel
 userList.push(bob);
 
 let jerry = new User("Jerry", "Man", 91, "06-11-1897", "Germany", "USA", "10/09/1917", "12/15/1918", 02)
-userList.push(bob);
+userList.push(jerry);
 
 let abraham = new User("Abraham", "Lincoln", 82, "02-12-1809", "Kentucky", "Washinton D.C", "04/04/1865", "04/15/1865", 03)
-userList.push(bob);
+userList.push(abraham);
 
 let outputInfo
 
